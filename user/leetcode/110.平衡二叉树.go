@@ -1,5 +1,5 @@
 /*
- * @lc app=leetcode.cn id=110 lang=cpp
+ * @lc app=leetcode.cn id=110 lang=golang
  *
  * [110] 平衡二叉树
  */
