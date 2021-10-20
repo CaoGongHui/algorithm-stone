@@ -63,28 +63,14 @@
 func isSameTree(p *TreeNode, q *TreeNode) bool {
 	if p == nil && q == nil {
 		return true
-	} else if p == nil {
-		return false
-	} else if q == nil {
+	}
+	if p == nil || q == nil {
 		return false
 	}
 	if p.Val != q.Val {
 		return false
 	}
-	return dfs(p.Left, q.Left) && dfs(p.Right, q.Right)
-}
-func dfs(p *TreeNode, q *TreeNode) bool {
-	if p == nil && q == nil {
-		return true
-	} else if p == nil {
-		return false
-	} else if q == nil {
-		return false
-	}
-	if p.Val != q.Val {
-		return false
-	}
-	return dfs(p.Left, q.Left) && dfs(p.Right, q.Right)
+	return isSameTree(p.Left, q.Left) && isSameTree(p.Right, q.Right)
 }
 
 // @lc code=end
